@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" >
+	<meta name='author' content="wangbin">
+	<title>儿童摄影</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<style>
+		body{
+			margin: 0px;
+			padding-top: 50px;
+		}
+		.navbar{
+			margin: 0px;
+			border-bottom: none;
+		}
+		header{
+			background-color: #eee;
+		}
+		header h1{
+			font-size: 2.2rem;
+			font-weight: normal;
+		}
+		.toolbar{
+			padding: 10px 0 10px 0;
+		}
+		th{
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle='collapse' data-target='#navbar'>
+					<sapn class="icon-bar"></sapn>
+					<sapn class="icon-bar"></sapn>
+					<sapn class="icon-bar"></sapn>
+				</button>
+				<a href="#" class="navbar-brand">艾米妮儿童摄影</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li class="active"><a href="#">客户</a></li>
+					<li><a href="#">宝贝</a></li>
+				    <li><a href="#">孕妈咪</a></li>
+				    <li><a href="#">会员卡</a></li>
+				    <li><a href="#">订单</a></li>
+				    <li><a href="#">预约</a></li>
+				    <li><a href="#">产品</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header>
+		<div class="container">
+			<h1>客户查询及管理</h1>
+		</div>
+	</header>
+	<div class="container toolbar">
+		<button class="btn btn-success">添加客户</button>
+		<a href="#" class="btn btn-warning" data-target="#myModal" data-toggle="modal">
+			<sapn class="glyphicon glyphicon-search">搜索</sapn>
+		</a>
+	</div>
+	<div class="container">
+		<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<tr>
+				<th style='width: 140px;'>添加时间</th>
+				<th style='width: 120px;' >姓名</th>
+				<th>性别</th>
+				<th>QQ</th>
+				<th>手机</th>
+				<th>客户经理</th>
+				<th>详情</th>
+			</tr>
+			<tr>
+				<td style='width: 140px;'>
+					<span data-toggle='tooltip' data-placement='left' title="这是时间">2016.11.16</span>
+				</td>
+				<td style='width: 120px;'>王彬</td>
+				<td>男</td>
+				<td>859529326</td>
+				<td>15950567587</td>
+				<td>王彬</td>
+				<td><span class="glyphicon glyphicon-edit"></span></td>
+			</tr>
+			<tr>
+				<td style='width: 140px;'>2016.11.16</td>
+				<td style='width: 120px;'>郭大将</td>
+				<td>男</td>
+				<td>859529326</td>
+				<td>15950567587</td>
+				<td>王彬</td>
+				<td><span class="glyphicon glyphicon-edit"></span></td>
+			</tr>
+				<tr>
+				<td style='width: 140px;'>2016.11.16</td>
+				<td style='width: 120px;'>郭淫棍</td>
+				<td>男</td>
+				<td>859529326</td>
+				<td>15950567587</td>
+				<td>王彬</td>
+				<td><span class="glyphicon glyphicon-edit"></span></td>
+			</tr>
+			</table>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal" role='dialog' tabIndex="-1"
+	aria-labelledby='myModalLabel'>
+		<div class="modal-dialog" role='document'>
+			<div class="modal-content">
+				<div class="modal-header">
+					<button aria-label='Close' data-dismiss='modal'
+					class='close'>&times</button>
+					<h4>用户搜索</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="name" class="col-sm-3">姓名：</label>
+							<div class="col-sm-6">
+								<input type="text" id="name" placeholder="客户姓名" class='form-control'>
+							</div>
+						</div>
+						<div class="form-group">
+				   	 <label for="QQ" class='col-sm-3'>QQ号:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='QQ' placeholder ='QQ号' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+				    <div class="form-group">
+				   	 <label for="tel" class='col-sm-3'>手机号:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='tel' placeholder ='手机号' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+				    <div class="form-group">
+				   	 <label for="id" class='col-sm-3'>身份证:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='id' placeholder ='身份证号' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+					   <div class="form-group">
+				   	 <label for="mannger" class='col-sm-3'>客户经理:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='mannger' placeholder ='客户经理' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button aria-label='Close' data-dismiss='modal' class="btn btn-default">关闭</button>
+					<button aria-label='Close' data-dismiss='modal' class="btn btn-success">搜索</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='bootstrap/js/jquery.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+	<script>
+		$(function(){
+			$("[data-toggle='tooltip']").tooltip();
+		})
+	</script>
+</body>
+</html>

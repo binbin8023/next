@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" >
+	<meta name='author' content="wangbin">
+	<title>常用组件</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<style>
+		body{
+			margin: 0px;
+			padding-top: 50px;
+		}
+		.navbar{
+			margin: 0px;
+			border-bottom: none;
+		}
+		header{
+			background-color: #eee;
+		}
+		header h1{
+			font-size: 2.2rem;
+			font-weight: normal;
+		}
+		.toolbar{
+			padding: 10px 0 10px 0;
+		}
+		th{
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<nav class='navbar navbar-fixed-top navbar-inverse'>
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle='collapse' data-target='#navbar'>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class='navbar-brand'>艾米妮儿童摄影</a>
+		</div>
+		<div class="collapse navbar-collapse" id = 'navbar'>
+			<ul class="nav navbar-nav">
+				<li><a href="#">首页</a></li>
+				<li class="active"><a href="#">客户</a></li>
+				<li><a href="#">宝贝</a></li>
+				<li><a href="#">孕妈咪</a></li>
+				<li><a href="#">会员卡</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">预约</a></li>
+				<li><a href="#">产品</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<header>
+		<div class="container">
+			<h1>客户查询及管理</h1>
+		</div>
+	</header>
+	<div class="container toolbar">
+	<!-- btn是按钮的缩写，设置了按钮的默认样式：圆角，灰色
+	 btn-success 设置一些特殊的按钮，成功操作的按钮-->
+	 <!-- btn-warning 谨慎操作的按钮 警告黄 btn-info 弹出信息的按钮 信息蓝 btn-danger 禁止操作的按钮 危险红  -->
+	 <!-- btn-lg 大按钮 btn-sm小按钮 -->
+		<button class="btn btn-success">添加客户</button>
+		<!-- Modal模态弹出的子窗口，在保留父窗口的前提下，产生的子窗口，对话窗口 -->
+		<a href="#" class="btn btn-warning" data-target='#myModal' data-toggle='modal'>
+		<span class="glyphicon glyphicon-search"></span> 搜索</a>
+	</div>
+	<div class="container">
+	<!-- table-responsive 浏览器在缩小的时候，自动适应屏幕的大小 -->
+		<div class="table-responsive">
+		<!-- table提供了基本表格的样式，table-bordered 提供所有单元格的边框 table-hover 提供鼠标悬停的状态 -->
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th style='width: 140px;'>添加时间</th>
+					<th style='width: 120px;' >姓名</th>
+					<th>性别</th>
+					<th>QQ</th>
+					<th>手机</th>
+					<th>客户经理</th>
+					<th>详情</th>
+				</tr>
+				<tr>
+					<td style='width: 140px;'>2016.11.16</td>
+					<!-- tooltip 提示语，显示title中的内容  placement 提示语显示的位置
+					提示语插件，不是纯粹的css插件，使用的时候必须用Jquery激活 -->
+					<td style='width: 120px;' ><span data-toggle='tooltip' data-placement='left' title='这是一个标题'>郭银贵</span></td>
+					<td>男</td>
+					<td>859529326</td>
+					<td>15950567587</td>
+					<td>王彬</td>
+					<td><span class="glyphicon glyphicon-edit"></span></td>
+				</tr>
+				<tr>
+					<td style='width: 140px;'>2016.11.16</td>
+					<td style='width: 120px;'>郭大将</td>
+					<td>男</td>
+					<td>859529326</td>
+					<td>15950567587</td>
+					<td>王彬</td>
+					<td><span class="glyphicon glyphicon-edit"></span></td>
+				</tr>
+				<tr>
+					<td style='width: 140px;'>2016.11.16</td>
+					<td style='width: 120px;'>郭淫棍</td>
+					<td>男</td>
+					<td>859529326</td>
+					<td>15950567587</td>
+					<td>王彬</td>
+					<td><span class="glyphicon glyphicon-edit"></span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- 对话框 -->
+	<!-- modal对话框的基本样式；fade淡入淡出  role角色：增强标签的语义性，
+	明确告诉div的语义，dialog对话的意思-->
+	<!-- tabIndex tab控制标签的选择，-1表示该标签不会倍tab'键选中,默认值为0-->
+	<!-- aria-labelledby 当div获取焦点的时候，读屏软件会读取aria-labelledby的值，一般填id -->
+	<div class="modal fade"  id='myModal' role='dialog' tabIndex="-1" aria-labelledby='myModalLabel'>
+		<div class="modal-dialog" role='document'>
+		  <!-- modal-content 设置对话框的内容：头，主体，页脚 -->
+			<div class="modal-content">
+			<!-- modal-header 设置对话框头部的类 -->
+				<div class="modal-header">
+				<!-- aria-label='Close' 和label标签的for属性相同，读屏软件在读取按钮的时候，会读取aria-label的值
+				适用于 input没有设置关联的label可以和aria-label进行替代 -->
+				<!-- data-dismiss='modal'关闭对话框 ;class='close'设置按钮的关闭样式-->
+				<!-- aria-hidden =true :会一直处于隐藏的状态直到再次被激活才会再次出现 -->
+					<button type='button' aria-label='Close' data-dismiss='modal' class='close'>&times</button>
+					<h4>用户搜索</h4>
+				</div>
+				<!-- modal-body 给对话框主体设置 -->
+				<div class="modal-body">
+				   <form action="#" class='form-horizontal'>
+				   <div class="form-group">
+				   	 <label for="name" class='col-sm-3'>姓名:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='name' placeholder ='客户姓名' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+				    <div class="form-group">
+				   	 <label for="QQ" class='col-sm-3'>QQ号:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='QQ' placeholder ='QQ号' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+				    <div class="form-group">
+				   	 <label for="tel" class='col-sm-3'>手机号:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='tel' placeholder ='手机号' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+				    <div class="form-group">
+				   	 <label for="id" class='col-sm-3'>身份证:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='id' placeholder ='身份证号' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+					   <div class="form-group">
+				   	 <label for="mannger" class='col-sm-3'>客户经理:</label>
+				   	 <div class="col-sm-6">
+				   	 <!-- form-control:控制输入框的大小 input-ml 适中 -->
+				   		<input type="text" id='mannger' placeholder ='客户经理' class='form-control input-ml'>
+				   	 </div>
+				   </div>
+				    			   
+					</form>
+				</div>
+				<!-- modal-footer 给对话框页脚的设置 -->
+				<div class="modal-footer">
+					<button aria-label='Close' data-dismiss='modal' class="btn btn-default">关闭</button>
+					<button aria-label='Close' data-dismiss='modal' class="btn btn-success">搜索</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='bootstrap/js/jquery.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js'></script>
+	<script>
+		$(function(){
+			$("[data-toggle='tooltip']").tooltip();
+		})
+	</script>
+</body>
+</html>
